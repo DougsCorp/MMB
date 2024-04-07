@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<!-- META TAGS -->
+
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Machine Books</title>
+
+<!-- LINKS -->
+
+<link rel="stylesheet" href="scripts/styles.css">
+<link rel="shortcut icon" href="images/fav.html">
+
+<!-- STYLES -->
+
+<style>
+
+* {
+    color: #000;
+}
+body {
+    background: #fff;
+}
+.logo {
+    width: 150px;
+}
+.progress {
+    background: #ff0026;
+}
+.bar {
+    background: #222222;
+}
+.option {
+    color: #FFFFFF;
+    background: transparent;
+    border: solid 1px #ff0026;
+}
+.option:hover {
+    color: #DDDDDD;
+    background: #ff0026;
+    border: solid 1px #ff0026;
+}
+.loading {
+    background: #000000;
+}
+.loading-title, .loading-text {
+    color: #FFFFFF;
+}
+.loading-bar-progress {
+    background: #ff0026;
+    animation: loading-bar -2s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+}
+.loading-bar {
+    background: #222222;
+}
+.disclaimer, .disclaimer a, .disclaimer a:visited {
+    color: #777777;
+}
+@keyframes progress {
+    0%      {width: 23.809523809524%;}
+    100%    {width: 28.571428571429%;}
+}
+</style>
+
+
+</head> 
+<body>
+
+
+<style>
+.social-display img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+.notice {
+    background: linear-gradient(to top right, #fffeea, #fffeea);
+    border: solid 1px #194f75;
+    animation: appear 500ms ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.notice-title {
+    color: #000000;
+}
+.notice-text {
+    color: #000000;
+}
+.continue {
+    animation: appear 500ms ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    background: #2c7de6;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+    opacity: 0;
+}
+.continue:hover {
+    background: #01b000;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+}
+</style>
+
+<section style="padding-top: 30px;margin-bottom: 80px;">
+  <div class="content center">
+    <img class="logo" src="images/logo-branco.png" />	
+
+    <h1>Sua idade NÃO vai determinar os seus resultados com essa estratégia.</h1>	
+
+    <span class="description">
+        <p>As pessoas que estão tendo resultados com Livros de Inteligência Artificial na Amazon tem <b>diversas idades e diversas condições de vida diferentes</b>, então se você acha que apenas os jovens podem aproveitar essa oportunidade você esta enganado.
+        <br><br>
+        <div class="social">
+            <div class="social-display">
+                <img src="images/b1.png" />
+            </div>
+        </div>
+        Nossos alunos são:
+        <ol style="text-align:left;">
+            <li>Adultos</li>
+            <li>Pessoas desempregadas</li>
+            <li>Donas de casa</li>
+            <li>Mulheres com filhos pequenos</li>
+            <li>Pessoas sem experiência com internet</li>
+        </ol>
+        <br>
+        Até mesmo <b>pessoas com mais de 50 anos</b> estão aproveitando toda sua experiência de vida e criatividade para criar livros incríveis e começar a ter seus primeiros lucros.
+        <br><br>
+        Então se você for aprovado não existe desculpa para não começar.
+    </span>
+        </p>
+        
+    </span>
+
+
+  </div>
+</section>
+
+<div class="social-continue">
+  <div class="content center">
+        <a class="continue" style="animation-delay: 10s;" href="index-q2.html">Continuar Teste</a>
+      </div>
+</div>
+
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const prefixes = ["index-q2.html"];
+
+                function getAllParams(url) {
+                    const urlObj = new URL(url);
+                    let paramString = "";
+
+                    // Iterando sobre todos os parâmetros da URL
+                    for (const [key, value] of urlObj.searchParams) {
+                        paramString += `${paramString ? '&' : ''}${key}=${value}`;
+                    }
+
+                    return paramString;
+                }
+
+                const links = document.querySelectorAll("a");
+
+                links.forEach(link => {
+                    const hasPrefix = prefixes.some(prefix => link.href.includes(prefix));
+                    if (hasPrefix) {
+                        const params = getAllParams(window.location.href);
+                        const separator = link.href.includes("?") ? "&" : "?";
+                        link.href += `${separator}${params}`;
+                    }
+                });
+            });
+        </script>
+
+
+</body>
+
+</html>

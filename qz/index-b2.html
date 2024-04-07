@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<!-- META TAGS -->
+
+<meta charset="UTF-8">
+<meta property="og:type" content="website" />
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Machine Books</title>
+
+<!-- LINKS -->
+
+<link rel="stylesheet" href="scripts/styles.css">
+<link rel="shortcut icon" href="images/fav.html">
+
+<!-- STYLES -->
+
+<style>
+
+* {
+    color: #000;
+}
+body {
+    background: #fff;
+}
+.logo {
+    width: 150px;
+}
+.progress {
+    background: #ff0026;
+}
+.bar {
+    background: #222222;
+}
+.option {
+    color: #000;
+    background: transparent;
+    border: solid 1px #ff0026;
+}
+.option:hover {
+    color: #DDDDDD;
+    background: #ff0026;
+    border: solid 1px #ff0026;
+}
+.loading {
+    background: #000000;
+}
+.loading-title, .loading-text {
+    color: #FFFFFF;
+}
+.loading-bar-progress {
+    background: #ff0026;
+    animation: loading-bar -2s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+}
+.loading-bar {
+    background: #222222;
+}
+.disclaimer, .disclaimer a, .disclaimer a:visited {
+    color: #777777;
+}
+@keyframes progress {
+    0%      {width: 23.809523809524%;}
+    100%    {width: 28.571428571429%;}
+}
+</style>
+
+
+</head> 
+<body>
+
+
+<style>
+.social-display img {
+    width: 100%;
+}
+.notice {
+    background: linear-gradient(to top right, #fffeea, #fffeea);
+    border: solid 1px #194f75;
+    animation: appear 500ms ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.notice-title {
+    color: #000000;
+}
+.notice-text {
+    color: #000000;
+}
+.continue {
+    animation: appear 500ms ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    background: #2c7de6;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+    opacity: 0;
+}
+.continue:hover {
+    background: #01b000;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+}
+</style>
+
+<section style="padding-top: 30px;">
+  <div class="content center">
+    <img class="logo" src="images/logo-branco.png" />	
+
+    <h1>Dura realidade!</h1>
+    <!--
+    <div class="social">
+        <div class="social-display">
+            <img src="images/escola.png"/>
+        </div>
+    </div>
+    -->
+
+    <span style="margin-bottom: 130px;" class="description">
+        <p>Talvez você não sinta nada ao ver essa noticia, ou talvez sim, porém <b>essa vai ser a realidade da maioria dos brasileiros da sua geração</b>. Isso porque muitos não pensam no dia de amanhã e na pessoa que eles vão ser quando ficarem mais velhos.
+            <br><br><b style="color: crimson;font-size: 20px;">Hoje, você deve se fazer perguntas como essas:</b>
+        <br>
+        <ol style="text-align:left;text-align: left;background-color: #ffbfbf;padding: 10px 30px;border-radius: 10px;">
+            <li>Como vou ganhar dinheiro quando eu estiver <b>cansado demais para trabalhar</b>?</li>
+            <br>
+            <li><b>Onde</b> vou estar morando?</li>
+            <br>
+            <li>Vou conseguir viver bem em um pais que tudo <b>fica mais caro a cada dia</b>?</li>
+            <br>
+            <li>Será que vou ter uma vida tranquila ou <b>vou depender de outras pessoas</b>?</li>
+            <br>
+            <li>Minha família também <b>vai ter que ralar</b> para ter um mínimo conforto?</li>
+            <br>
+            <li>Vou conseguir <b>realizar os meus sonhos</b>?</li>
+        </ol>
+        <br>
+        O que você pode fazer para mudar essa realidade <b>deve ser feito hoje</b>, ou então o seu "eu" de amanhã pode arcar com as consequências.
+        <br><br>
+        Então não deixe as oportunidades passarem, elas podem não acontecer novamente.
+        </p>
+        
+    </span>
+
+    
+  </div>
+</section>
+
+<div class="social-continue">
+  <div class="content center">
+        <a class="continue" style="animation-delay: 10s;" href="index-q9.html">Continuar Teste</a>
+      </div>
+</div>
+
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const prefixes = ["index-q9.html"];
+
+                function getAllParams(url) {
+                    const urlObj = new URL(url);
+                    let paramString = "";
+
+                    // Iterando sobre todos os parâmetros da URL
+                    for (const [key, value] of urlObj.searchParams) {
+                        paramString += `${paramString ? '&' : ''}${key}=${value}`;
+                    }
+
+                    return paramString;
+                }
+
+                const links = document.querySelectorAll("a");
+
+                links.forEach(link => {
+                    const hasPrefix = prefixes.some(prefix => link.href.includes(prefix));
+                    if (hasPrefix) {
+                        const params = getAllParams(window.location.href);
+                        const separator = link.href.includes("?") ? "&" : "?";
+                        link.href += `${separator}${params}`;
+                    }
+                });
+            });
+        </script>
+
+</body>
+
+</html>

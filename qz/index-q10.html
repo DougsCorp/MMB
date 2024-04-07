@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<!-- META TAGS -->
+
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Machine Books</title>
+
+<!-- LINKS -->
+
+<link rel="stylesheet" href="scripts/styles.css">
+<link rel="shortcut icon" href="images/fav.html">
+
+<!-- STYLES -->
+
+<style>
+
+* {
+    color: #000;
+}
+body {
+    background: #fff;
+}
+.logo {
+    width: 150px;
+}
+.progress {
+    background: #01b000;
+}
+.bar {
+    background: #222222;
+}
+.option {
+    color: #000;
+    background: transparent;
+    border: solid 1px #9ea6ff;
+}
+.option:hover {
+    color: #DDDDDD;
+    background: #01b000;
+    border: solid 1px #01b000;
+}
+.loading {
+    background: #000000;
+}
+.loading-title, .loading-text {
+    color: #FFFFFF;
+}
+.loading-bar-progress {
+    background: #ff0026;
+    animation: loading-bar -2s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+}
+.loading-bar {
+    background: #222222;
+}
+.disclaimer, .disclaimer a, .disclaimer a:visited {
+    color: #777777;
+}
+@keyframes progress {
+    0%      {width: 52.94117647058823%;}
+    100%    {width: 58.8235294117647%;}
+}
+</style>
+
+
+
+</head> 
+<body>
+
+
+<header>
+  <div class="content center">
+    <img class="logo" src="images/logo-branco.png" />
+    <div class="bar">
+        <div class="progress"></div>
+    </div>
+  </div>
+</header>
+
+
+<section>
+  <div class="content center">
+	<h1>O que você faria com 2 mil reais a mais no fim do Mês?</h1>	
+    <div class="layout2">
+	    <a class="option" style="padding-left: 17px;" href="index-q11.html">Ajudaria em casa, no supermercado e nas contas do mês, já que minha renda não da pra pagar tudo.</a>
+	    <a class="option" style="padding-left: 17px;" href="index-q11.html">Vou conseguir ter uma qualidade de vida melhor, comer fora, levar minha família no shopping, comprar uma roupa nova.</a>
+	    <a class="option" style="padding-left: 17px;" href="index-q11.html">Iria juntar pra fazer uma viajem.</a>
+        <a class="option" style="padding-left: 17px;" href="index-q11.html">Iria juntar pra gastar em algo melhor. Um investimento ou abrir um negócio próprio pra sair da corrida dos ratos.</a>
+    </div>
+  </div>
+</section>
+
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const prefixes = ["index-q11.html"];
+
+                function getAllParams(url) {
+                    const urlObj = new URL(url);
+                    let paramString = "";
+
+                    // Iterando sobre todos os parâmetros da URL
+                    for (const [key, value] of urlObj.searchParams) {
+                        paramString += `${paramString ? '&' : ''}${key}=${value}`;
+                    }
+
+                    return paramString;
+                }
+
+                const links = document.querySelectorAll("a");
+
+                links.forEach(link => {
+                    const hasPrefix = prefixes.some(prefix => link.href.includes(prefix));
+                    if (hasPrefix) {
+                        const params = getAllParams(window.location.href);
+                        const separator = link.href.includes("?") ? "&" : "?";
+                        link.href += `${separator}${params}`;
+                    }
+                });
+            });
+        </script>
+
+</body>
+</html>

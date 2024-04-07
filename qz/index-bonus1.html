@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<!-- META TAGS -->
+
+<meta charset="UTF-8">
+<meta property="og:type" content="website" />
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Alma Gêmea Milionária</title>
+
+<!-- LINKS -->
+
+<link rel="stylesheet" href="scripts/styles.css">
+<link rel="shortcut icon" href="images/fav.html">
+
+<!-- STYLES -->
+
+<style>
+
+* {
+    color: #000;
+}
+body {
+    background: #fff;
+}
+.logo {
+    width: 150px;
+}
+
+.continue {
+    animation: appear 500ms ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    background: #ff0026;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+    opacity: 0;
+}
+.continue:hover {
+    background: #ff0026;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+}
+
+</style>
+
+
+</head> 
+<body>
+    <header>
+      <div class="content center">
+        <img class="logo" src="images/logo-branco.png" />
+        
+      </div>
+    </header>
+
+    <section style="padding-top: 19px;">
+        <div class="content center">
+        	<h1>Com base nas suas respostas, concluímos que você vai precisar de alguns conteúdos adicionais.</h1>	
+            <span class="description">Por isso, Além do método Machine Books para fazer 2 mil por mês com Livros Ilustrados, você vai receber mais <b style="color:#00bd22">3 Bônus Adicionais Totalmente GRATUITOS.</b></span>
+
+            <h1>Bônus 1:</h1>
+
+            <img style="border-top-right-radius: 10px;border-top-left-radius: 10px;width: 100%;" src="images/12.png">
+
+            <div style="margin: 20px auto;color: #fff;text-align: center;">
+            
+                <div style="background: linear-gradient(to top right, #000, #5299e5);; padding: 15px 10px;margin-top: -27px;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+
+                    <h2 style="font-family: 'Montserrat', Sans-serif;font-weight: 700;font-size: 25px; color: #fff;">Vendendo em Dólares</h2>
+
+                    <p style="font-weight:500; color: #fff">Você pode atingir a meta de 2mil por mês somente com esse bônus. Não é novidade pra ninguém que o dólar é a moeda mais forte do mundo, e com essa estratégia nós temos a possibilidade de vendemos nossos livros nos Estados Unidos e recebermos em dólar. Ou seja, vendendo em dólar recebemos 5 vezes mais do que em Real. E o melhor, não é necessário falar inglês.</p>
+
+                    <h3 style="font-family: 'Montserrat', Sans-serif;font-weight: 700;font-size: 20px;border-top: 1px solid white;padding-top: 15px;color: #fff;">Esse bônus é vendido separadamente por <span style="color:#ff8585;">R$19,90</span> Mas hoje  ele será seu por:<br><span style="color: lime;font-size: 30px;">R$ 0,00</span></h3>
+                </div>
+            </div>
+
+            <a class="continue" href="index-bonus2.html">Continuar</a>
+        </div>
+    </section>
+
+
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const prefixes = ["index-bonus2.html"];
+
+                function getAllParams(url) {
+                    const urlObj = new URL(url);
+                    let paramString = "";
+
+                    // Iterando sobre todos os parâmetros da URL
+                    for (const [key, value] of urlObj.searchParams) {
+                        paramString += `${paramString ? '&' : ''}${key}=${value}`;
+                    }
+
+                    return paramString;
+                }
+
+                const links = document.querySelectorAll("a");
+
+                links.forEach(link => {
+                    const hasPrefix = prefixes.some(prefix => link.href.includes(prefix));
+                    if (hasPrefix) {
+                        const params = getAllParams(window.location.href);
+                        const separator = link.href.includes("?") ? "&" : "?";
+                        link.href += `${separator}${params}`;
+                    }
+                });
+            });
+        </script>
+
+
+</body>
+</html>

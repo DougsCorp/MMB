@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <!-- /Added by HTTrack -->
+  <head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Books</title>
+    <!-- LINKS -->
+    <link rel="stylesheet" href="scripts/styles.css">
+    <link rel="shortcut icon" href="images/fav.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- STYLES -->
+    <style>
+      * {
+      color: #000;
+      }
+      body {
+      background: #fff;
+      }
+      .logo {
+      width: 150px;
+      }
+      .progress {
+      background: #ff0026;
+      }
+      .bar {
+      background: #222222;
+      }
+      .option {
+      color: #000;
+      background: transparent;
+      border: solid 1px #ff0026;
+      }
+      .option:hover {
+      color: #DDDDDD;
+      background: #ff0026;
+      border: solid 1px #ff0026;
+      }
+      .loading {
+      background: #000000;
+      }
+      .loading-title, .loading-text {
+      color: #FFFFFF;
+      }
+      .loading-bar-progress {
+      background: #ff0026;
+      animation: loading-bar -2s ease-in;
+      animation-fill-mode: forwards;
+      animation-delay: 500ms;
+      }
+      .loading-bar {
+      background: #222222;
+      }
+      .disclaimer, .disclaimer a, .disclaimer a:visited {
+      color: #777777;
+      }
+      @keyframes progress {
+      0%      {width: 90.47619047619%;}
+      100%    {width: 95.238095238095%;}
+      }
+    </style>
+    <style>
+      .checkout-display {
+      background: linear-gradient(to top right, #000, #5299e5);
+      /*border: solid 1px #000305;*/
+      }
+      .checkout-left {
+      border-color: #000305;
+      }
+      .checkout-transform {
+      background-image: url('images/transform.webp');
+      }
+      .checkout-title, .checkout-text {
+      color: #ffffff;
+      }
+      .checkout-bar {
+      background: #111111;
+      }
+      .checkout-left .checkout-bar-progress {
+      background: linear-gradient(to right, #9c3636, #de4949);
+      animation: checkout-bar-progress-left 2s ease-in;
+      animation-fill-mode: forwards;
+      animation-delay: 0;
+      }
+      .checkout-right .checkout-bar-progress {
+      background: linear-gradient(to right, #0f9b4a, #14d665);
+      animation: checkout-bar-progress-right 2s ease-in;
+      animation-fill-mode: forwards;
+      animation-delay: 0;
+      }
+      .checkout-left .checkout-bar-icon {
+      background: radial-gradient(closest-side, #de4949 55%, #FFFFFF 65% 80%, #de4949 90% 100%);
+      }
+      .checkout-right .checkout-bar-icon {
+      background: radial-gradient(closest-side, #14d665 55%, #FFFFFF 65% 80%, #14d665 90% 100%);
+      }
+      .checkout-left .checkout-status {
+      background: #bf1919;
+      color: #FFFFFF;
+      border: solid 2px #fffeea;
+      }
+      .checkout-right .checkout-status {
+      background: #1cad59;
+      color: #FFFFFF;
+      border: solid 2px #fffeea;
+      }
+      .checkout-safe {
+      background: #026336;
+      color: #deffe8;
+      border: solid 1px transparent;
+      }
+      .checkout-promise {
+      color: #FFFFFF;
+      }
+      /* PLAN */
+      .plan {
+      animation: appear 500ms ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+      }
+      .plan-promise {
+      color: #F5F5F5;
+      }
+      .plan-metrics {
+      background: linear-gradient(to top right, #000, #5299e5);
+      /*border: solid 1px #000305;*/
+      }
+      .plan-col {
+      border-color: #000305;
+      }
+      .plan-bar {
+      background: #111111;
+      }
+      .plan-label {
+      color: #ffffff;
+      animation: appear 1s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 5s;
+      }
+      .plan-progress1 {
+      background: linear-gradient(to top, #ff0320, #ff0320);
+      animation: plan1 1.8s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 2.5s;
+      }
+      .plan-progress2 {
+      background: linear-gradient(to top, #ff7300, #ff7300);
+      animation: plan2 1.8s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 3.0s;
+      }
+      .plan-progress3 {
+      background: linear-gradient(to top, #c2fa28, #c2fa28);
+      animation: plan3 1.8s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 3.5s;
+      }
+      .plan-progress4 {
+      background: linear-gradient(to top, #2fff00, #2fff00);
+      animation: plan4 1.8s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 4.0s;
+      }
+      .plan-title, .plan-text {
+      color: #ffffff;
+      }
+      @keyframes plan1 {
+      0%      {height: 0px;}
+      100%    {height: 24px;}
+      }
+      @keyframes plan2 {
+      0%      {height: 0px;}
+      100%    {height: 48px;}
+      }
+      @keyframes plan3 {
+      0%      {height: 0px;}
+      100%    {height: 60px;}
+      }
+      @keyframes plan4 {
+      0%      {height: 0px;}
+      100%    {height: 72px;}
+      }
+      /* /PLAN */
+      .checkout-goal {
+      background: #17415e;
+      border: solid 1px #194f75;
+      }
+      .checkout-goal-title, checkout-goal-text {
+      color: #FFFFFF;
+      }
+      .checkout-price {
+      background: transparent;
+      border: solid 2px #17415e;
+      }
+      .checkout-price-icon {
+      background: radial-gradient(closest-side, #00b10d 55%, #FFFFFF 65% 80%, #008d15 90% 100%);
+      }
+      .checkout-price-title, .checkout-price-text {
+      color: #000;
+      }
+      .checkout-price-right {
+      background: #078700;
+      }
+      .checkout-price-desc, .checkout-price-value {
+      color: #fff;
+      }
+      .checkout-discount {
+      background: #fcd4d4;
+      color: #000305;
+      border: solid 1px #e0c1c1;
+      }
+      #timer1, #timer2, #timer3 {
+      color: #000305;
+      }
+      .checkout-block {
+      background: linear-gradient(to top right, #fffeea, #fffeea);
+      border: solid 1px #fff300;
+      }
+      .checkout-block-title, .checkout-block-list li {
+      color: #000305;
+      }
+      .checkout-numbers {
+      background: #ffffff;
+      }
+      .checkout-numbers-title, .checkout-numbers-text {
+      color: #000305;
+      }
+      .depo-row {
+      background: linear-gradient(to top right, #ffffff, #ffffff);
+      border: solid 1px #194f75;
+      }
+      .depo-name, .depo-text {
+      color: #000305;
+      }
+      .checkout-garanty {
+      background: linear-gradient(to top right, #026336, #026336);
+      border: solid 1px 000305;
+      }
+      .checkout-garanty-title, .checkout-garanty-text {
+      color: #ffffff;
+      }
+      .continue {
+      animation: appear 500ms ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+      background: #078700;
+      color: #FFFFFF;
+      border: solid 1px transparent;
+      opacity: 0;
+      }
+      .continue:hover {
+      background: #ff0026;
+      color: #FFFFFF;
+      border: solid 1px transparent;
+      }
+      @keyframes checkout-bar-progress-left {
+      0%      {width: 0;}
+      100%    {width: 25%;}
+      }
+      @keyframes checkout-bar-progress-right {
+      0%      {width: 25%;}
+      100%    {width: 95%;}
+      }
+    </style>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1224387941869844');
+    fbq('track', 'Contact');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1224387941869844&ev=PageView&noscript=1"/>
+    </noscript>
+
+  </head>
+  <body>
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <section class="checkout">
+      <div class="content center localize">
+        <img class="logo" src="images/logo-branco.png" alt="logo">
+        <h1 style="background-color: #03a9f4;border-radius: 10px;padding: 5px;color:#fff;font-family: Oswald;font-weight: bold; ">100% com Inteligência Artificial</h1>
+        <h2>Faça R$ 2 Mil extra todo mês Com livros ilustrados na Amazon trabalhando <b style="color:red;">Uma hora por dia.</b></h2>
+
+        <div style="text-align: left;">
+          ✅ Sem Estoque
+          <br>
+          ✅ Totalmente Online
+          <br>
+          ✅ Sem Precisar Vender
+          <br>
+          ✅ Sem entender sobre Escrita
+          <br>
+          ✅ Sem entender sobre Desenho
+          <br>
+          ✅ Método Copia e Cola  
+        </div>
+        <div class="checkout-display">
+          <div class="checkout-flex">
+            <div class="checkout-left">
+              <span class="checkout-title">O Gilberto já fez 350 reais 🤭 </span>
+            </div>
+            <div class="checkout-right">
+              <span class="checkout-title">O Gabriel já fez lucro em 4 dias 😍</span>
+            </div>
+          </div>
+
+
+          <style type="text/css">
+            .image-popup {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 5px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+          }
+
+          .popup-image {
+            margin: auto;
+            display: block;
+            height: 100%;
+          }
+
+          .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 34px;
+            cursor: pointer;
+            border-radius: 50%;
+            background: brown;
+            padding: 0;
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            opacity: 0.9;
+          }
+
+          .close-btn:hover,
+          .close-btn:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          </style>
+          <div class="checkout-transform">
+            <div class="checkout-left">
+              <img style="cursor: pointer;" class="checkout-image" src="images/prova-03.jpeg" alt="Seu plano exlusivo esta pronto" />                            
+            </div>
+            <div class="checkout-right">
+              <img style="cursor: pointer;" class="checkout-image" src="images/prova-02.jpeg" alt="Seu plano exlusivo esta pronto" />                                
+            </div>
+          </div>
+          <!-- Popup de imagem grande -->
+          <div id="image-popup" class="image-popup">
+            <span class="close-btn">&times;</span>
+            <img id="popup-image" class="popup-image" src="" alt="Imagem em tamanho grande">
+          </div>
+          <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".checkout-image");
+            const popup = document.getElementById("image-popup");
+            const popupImage = document.getElementById("popup-image");
+            const closeBtn = document.querySelector(".close-btn");
+
+            images.forEach(function(image) {
+              image.addEventListener("click", function() {
+                popupImage.src = image.src;
+                popup.style.display = "block";
+              });
+            });
+
+            closeBtn.addEventListener("click", function() {
+              popup.style.display = "none";
+            });
+
+            popup.addEventListener("click", function(event) {
+              if (event.target === popup) {
+                popup.style.display = "none";
+              }
+            });
+          });
+          </script>
+
+
+          <div class="checkout-flex">
+            <div class="checkout-left">
+              <span class="checkout-text">Sua vida como está hoje.</span>
+              <div class="checkout-bar">
+                <div class="checkout-bar-progress">
+                  <div class="checkout-bar-icon"></div>
+                </div>
+              </div>
+              <div class="checkout-status">
+                <img class="status-icon" src="images/icons/alert.webp" />
+                Insatisfeito, sabendo que precisa fazer algo para mudar sua realidade e sair da corrida dos ratos, mas continua esperando e fazendo tudo igual...
+              </div>
+            </div>
+            <div class="checkout-right">
+              <span class="checkout-text">Sua vida depois de 30 dias.</span>
+              <div class="checkout-bar">
+                <div class="checkout-bar-progress">
+                  <div class="checkout-bar-icon"></div>
+                </div>
+              </div>
+              <div class="checkout-status">
+                <img class="status-icon" src="images/icons/check.webp" />Finalmente resolveu fazer algo a respeito e agora vive sem se preocupar com dinheiro depois de aprender a fazer 2 mil extra todo mês com os livros ilustrados na Amazon.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <a class="continue scrollSuave" style="animation-delay: 500ms;" href="#desconto">DESBLOQUEAR ACESSO!</a>
+        <div class="checkout-safe">
+          <img class="safe-icon" src="images/icons/safe.webp" />Pagamento 100% seguro    
+        </div>
+
+        <!-- prova -->
+        <span id="checkout-promise" class="checkout-promise">
+          <p>Se você ainda acha que esse negócio de inteligência artificial não tem futuro. <br>Leia isso...</p>
+          <img style="width: 100%;border-radius: 10px;" src="images/prova.png">
+        </span>
+        <!-- END prova -->
+
+        <!-- NÚMEROS -->
+          <h1>De todos os nosso alunos...</h1>
+        <div class="checkout-flex">
+          <div style="background-color:#00a51d" class="checkout-numbers">
+            <span style="color:#fff" class="checkout-numbers-title">98%</span>
+            <span style="color:#fff" class="checkout-numbers-text">Já estão recebendo o lucro com o primeiro livro.</span>
+          </div>
+          <div style="background-color:#00a51d" class="checkout-numbers">
+            <span style="color:#fff" class="checkout-numbers-title">56%</span>
+            <span style="color:#fff" class="checkout-numbers-text">Tiveram resultados em menos de 10 dias.</span>
+          </div>
+          <div style="background-color:#00a51d" class="checkout-numbers" style="margin: 0;">
+            <span style="color:#fff" class="checkout-numbers-title">82%</span>
+            <span style="color:#fff" class="checkout-numbers-text">Acham o método simples e fácil de ser aplicado.</span>
+          </div>
+        </div>
+        <!-- END Numeros -->
+
+        <!-- DEPOIMENTOS -->
+        <div class="checkout-depo">
+          <span class="depo-title">Quem conhece, recomenda!</span>
+          <div class="depo-row">
+            <div class="depo-name">
+                <img class="depo-image" src="images/foto1.jpg" alt="Raissa Silva" />
+                Raissa Silva<br>
+                <span style="color: #a7a7a7;font-size: 10px;margin-left: 29px;">Juiz De Fora - MG</span>
+            </div>
+            <div class="depo-text">Graças a esse método estou vivendo um verdadeiro sonho, nunca que eu imaginaria estar recebendo um dinheiro assim trabalhando tão pouco igual eu faço, foi 1150 de lucro esse mês gratidão eterna</div>
+            <div class="depo-stars">
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+            </div>
+          </div>
+          <div class="depo-row">
+            <div class="depo-name"><img class="depo-image" src="images/foto2.jpg" alt="Julia Almeida" /> Julia Almeida<br>
+                <span style="color: #a7a7a7;font-size: 10px;margin-left: 29px;">Curitiba - PR</span></div>
+            <div class="depo-text">To passada. Em 4 dias seguindo o passo a passo consegui postar meu primeiro livro e no mesmo dia já saiu a primeira venda. Agora que eu vi que funciona estou muito animada para fazer os próximos.</div>
+            <div class="depo-stars">
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+            </div>
+          </div>
+          <div class="depo-row">
+            <div class="depo-name">
+              <img class="depo-image" src="images/foto5.jpg" alt="Izabeli Silva" /> Izabeli Silva<br>
+                <span style="color: #a7a7a7;font-size: 10px;margin-left: 29px;">Niterói - RJ</span></div>
+            <div class="depo-text">Depois que aprendi essas informações no método nunca mais me humilhei pra ngm por causa de dinheiro, Passar dificuldade com filho pequeno ngm merece isso. Quero bater 10 livros publicados até o fim do mês.</div>
+            <div class="depo-stars">
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+            </div>
+          </div>
+        </div>
+        <!-- END Depoimentos -->
+
+
+        <!-- BENEFÍCIOS -->
+        <span>
+          <p style="margin-top: 60px;font-weight: 500;" >O método Machine Books já esta 100% pronto, basta desbloquear seu acesso e começar os estudos hoje mesmo.</p>
+        </span>
+        <div class="checkout-block">
+          <span class="checkout-block-title">O que você vai ter acesso?</span>
+          <img style="width:100%" src="images/mockup-1.png">
+          <ul class="checkout-block-list">
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Método Passo a Passo: 2 mil extra em 30 dias</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Histórias que vendem</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Estruturação eficiente com IA</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Ilustrações cativantes com IA</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Manual sobre dimensões e tipos de livros</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Montando um Livro irresistível</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Tutorial: Publicando seu Livro na Amazon</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Precificando seu livro</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Publiquei, e agora? Como vou receber?</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Dicas para aprovação rápida.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> <b style="color:black">Bônus 1:</b> Vendendo em Dólar, receba 5x mais.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> <b style="color:black">Bônus 2:</b> Livros Para Colorir. Vende Muito!</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> <b style="color:black">Bônus 3:</b> Os temas de histórias que mais vendem</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" /> Suporte 24h.</li>
+          </ul>
+        </div>
+        <!-- END Beneficios -->
+
+
+        <!-- Projeção -->
+        <div class="plan">
+            <p style="margin-top: 60px;font-weight: 600;" >Essa é sua projeção de resultados começando HOJE.</p>
+          <div class="plan-row">
+            <div class="plan-metrics">
+              <div class="plan-col">
+                <span class="plan-text">Hoje Você ainda está aqui...</span>
+                <div class="plan-bar">
+                  <div class="plan-progress1"></div>
+                </div>
+                <span class="plan-title">HOJE</span>
+                <span style="color:#fff" class="plan-desc">Muito abaixo<br />da meta</span>                
+              </div>
+              <div class="plan-col">
+                <span class="plan-text">Resultado após seu 1° Livro</span>
+                <div class="plan-bar">
+                  <div class="plan-progress2"><span class="plan-label"></span></div>
+                </div>
+                <span class="plan-title">13 DIAS</span>
+                <span style="color:#fff" class="plan-desc">Os primeiros <br />lucros aparecem</span>                
+              </div>
+              <!--
+                <div class="plan-col">
+                    <span class="plan-text">Primeiros Resultados</span>
+                    <div class="plan-bar">
+                        <div class="plan-progress3"><span class="plan-label">30m</span></div>
+                    </div>
+                    <span class="plan-title">5 DIAS</span>
+                    <span class="plan-desc">Metade do<br />treinamento</span>                
+                </div>-->
+              <div class="plan-col" style="margin-right: 0;border: 0;padding: 0;">
+                <span class="plan-text">Chegou no seu objetivo</span>
+                <div class="plan-bar">
+                  <div class="plan-progress4"><span class="plan-label"></span></div>
+                </div>
+                <span class="plan-title">28 DIAS</span>
+                <span style="color:#fff" class="plan-desc">Recebendo entre<br />Mil e 2 Mil extra</span>                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END projeção -->
+
+        <!-- GARANTIA -->
+        <div class="checkout-garanty">
+          <img style="width:160px" class="checkout-garanty-image" src="images/garantia.png" alt="Garantia" />
+          <span class="checkout-garanty-title">Teste sem compromisso!</span>
+          <span  class="checkout-garanty-text">
+            <p style="color:#fff">Aqui sua satisfação é garantida, você tem 30 dias de <strong style="color:#fff">garantia incondicional</strong>.</p>
+            <p style="color:#fff">Faça a sua inscrição agora e receba um período de teste de 30 dias sem compromisso.</p>
+            <p style="color:#fff">Se não gostar, não importa qual seja o motivo, basta enviar um e-mail...</p>
+            <p style="color:#fff">Faremos seu reembolso de forma imediata, sem fazer perguntas.</p>
+          </span>
+        </div>
+
+        <!-- Desconto -->
+        <div id="desconto" class="checkout-flex">
+          <div class="checkout-goal">
+            <img class="checkout-goal-icon" src="images/icons/goal.webp" alt="Objetivos" />
+            <span class="checkout-goal-title">Cupom de Desconto Aplicado</span>
+            <span style="padding: 0;text-align: center;font-size: 12px; color:#fff" class="checkout-goal-text">Economize 200 reais desbloqueando seu acesso agora.</span>
+          </div>
+          <div class="checkout-goal" style="margin-right: 0;">
+            <img class="checkout-goal-icon" src="images/icons/clock.webp" alt="Tempo" />
+            <span class="checkout-goal-title">Desconto Limitado</span>
+            <span style="padding: 0;text-align: center;font-size: 12px;color: #fff;" class="checkout-goal-text">O Desconto esta disponível somente por por alguns minutos e somente nessa página</span>
+          </div>
+        </div>
+        <!-- Desconto -->
+
+        <!-- OFERTA -->
+        <style type="text/css">
+          .a-btn {
+          text-decoration: none;
+          -webkit-font-smoothing: antialiased;
+          margin: 0;
+          border: 0; 
+          font: inherit; 
+          vertical-align: baseline;
+          color: #2e82bc; 
+          outline: 0; 
+          line-height: 1; 
+          text-align: center; 
+          position:relative!important; display: inline-block!important;
+          border-style: solid; 
+          width: 100%; padding-left: 0!important; padding-right: 0!important; 
+          margin-bottom: 10px; 
+          padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
+          border-radius: 6px; 
+          background: linear-gradient(to bottom, #00ff08 0%, #095600 100%);
+          box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+          text-decoration: none!important;
+          cursor: pointer;
+           animation: pulse 1.5s infinite alternate;
+          animation-name: pulse;
+          -webkit-animation-name: pulse;
+          animation-duration: 1.5s;
+          -webkit-animation-duration: 1.5s;
+          animation-iteration-count: infinite;
+          -webkit-animation-iteration-count: infinite;
+          text-decoration: none;
+        }
+        @keyframes pulse{
+          0%,100%{transform:scale(.9);opacity:.9;}
+          50%{transform:scale(1);opacity:1;}
+          }
+          @-webkit-keyframes pulse{
+          0%,100%{-webkit-transform:scale(.95);opacity:.7}
+          50%{-webkit-transform:scale(1);opacity:1}
+        }
+        .a-btn:hover {
+            background: #00ff08;
+            color: #fff;
+            border-radius: 5px;
+            /*box-shadow: 0 0 5px #00ff08b3, 0 0 25px #00ff08b3, 0 0 50px #00ff08b3, 0 0 100px #00ff08b3;*/
+        }
+        .span-btn {
+          text-decoration: none;
+          -webkit-font-smoothing: antialiased; 
+          text-align: center;
+          margin: 0; 
+          border: 0; 
+          font: inherit;
+          vertical-align: baseline;
+          display: block; 
+          position: relative; 
+          z-index: 1; 
+          padding: 0 15px; 
+          white-space: normal; 
+          font-size: 20px;
+          color: #ffffff; 
+          font-family: Oswald; 
+          font-weight: bold; 
+          text-shadow: #000000 0px 1px 0px;
+          text-decoration: none;
+        }
+        </style>
+        
+        <div style="border:1px solid;border-radius: 20px;padding: 10px;margin: 20px 0;">
+          <div>
+            <div style="margin-top:30px" class="checkout-discount">
+              <img class="notice-icon" src="images/icons/timer.webp" />Seu desconto expira em <span id="timer1"></span> min
+            </div>
+            <img style="width:100%" src="images/mockup-2.png">
+            <div>
+              <p style="color: red;font-weight: bold;font-size: 15px;margin: 0;">DE <span style="color: red;font-weight: bold;font-size: 15px;text-decoration: line-through;">229,90</span><span style="color: #00d700;font-weight: bold;font-size: 15px;"> POR APENAS:</span></p>
+              <p style="font-weight: bold;font-size: 25px;margin: 0;">6X <span style="color:#00d700;font-size:70px">5,52</span></p>
+              <p style="font-weight: bold;font-size: 15px;margin: 0;">OU R$29,90 À VISTA</p>
+            </div>
+            <img style="width:100%; margin-top:20px" src="images/pay.png">
+            <div style="margin-bottom:10px" id="cta1" class="esconder mt-4">
+              <a href="https://pay.kiwify.com.br/ToG0165" class="a-btn" style="text-decoration: none;">
+                <span class="span-btn">QUERO 2 MIL EXTRA TODO MÊS</span>
+              </a>
+            </div>
+            <div style="margin-top: 10px;" class="checkout-safe">
+              <img class="safe-icon" src="images/icons/safe.webp" />Pagamento 100% seguro    
+            </div>
+            <div style="font-family: 'Montserrat', Sans-serif;font-size: 16px;font-weight: 500;">
+              <h3 style="font-size: 18px;font-weight: 800;text-align: center;">Resumo de tudo o que você vai receber:</h3>
+              <p style="margin: 5px 0;text-align: left;">✅ <b>Método Completo:</b> 2Mil p/ Mês Com Livros Ilustrados na Amazon</p>
+              <p style="margin: 5px 0;text-align: left;">✅ <b>Suporte 24h</b></p>
+              <p style="margin: 5px 0;text-align: left;">✅ <b>BÔNUS 1:</b> Vendendo em Dólar</p>
+              <p style="margin: 5px 0;text-align: left;">✅ <b>BÔNUS 2:</b> Livros Para Colorir</p>        
+              <p style="margin: 5px 0;text-align: left;">✅ <b>BÔNUS 3:</b> Os Temas que Mais Vendem</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- FIM DA OFERTA -->
+
+        <!-- PREÇO
+        <div style="margin-top:30px" class="checkout-discount">
+          <img class="notice-icon" src="images/icons/timer.webp" />Seu desconto expira em <span id="timer1"></span> min
+        </div>
+        <div id="oferta" class="checkout-price">
+
+          <div class="checkout-price-left">
+            <div class="checkout-price-icon"></div>
+            <span class="checkout-price-title">TESTE POR 30 DIAS</span>
+            <span class="checkout-price-text">Sem compromisso</span>
+          </div>
+          
+              <div class="checkout-price-right">
+                <span class="checkout-price-desc">De R$ 229,00<br>Por apenas 6x de</span>
+                <span style="font-size:30px" class="checkout-price-value">R$ 5,52</span>
+                <span class="checkout-price-desc">ou <b style="color:#fff">R$29</b> á vista</span>
+              </div>
+          
+        </div>
+
+        <a class="continue" style="animation-delay: 1s;" href="https://pay.kiwify.com.br/Tri3AV5">DESBLOQUEAR ACESSO!</a> 
+        <div class="checkout-safe">
+          <img class="safe-icon" src="images/icons/safe.webp" />Pagamento 100% seguro    
+        </div>
+         END Preço -->
+
+        <!-- FAQ -->
+        <div style="background: linear-gradient(to top right, #000, #5299e5);;padding: 20px 5px;margin-top: 30px;border-radius: 20px;">
+            <h2 style="color: #fff;">Perguntas Frequêntes</h2>
+            <style>
+              .answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out;
+              }
+              .answer.show {
+                max-height: 1000px; /* ajuste conforme necessário */
+              }
+            </style>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;color: #fff;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(1)">O que é o Método Machine Books?</h4>
+              <div id="answer1" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >O Método Machine Books é um passo a passo criado para fazer uma renda extra de até 2 mil reais por mês com livros ilustrados vendendo na amazon.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;color: #fff;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(2)">O que vou receber?</h4>
+              <div id="answer2" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Assim que você confirmar o pagamento do Método Machine Books, você receberá um E-mail com acesso ao conteúdo, e além disso, receberá acesso a uma plataforma VIP onde encontrará todo o cronograma passo a passo para começar ainda hoje.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;color: #fff;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(3)">O que acontece depois que fizer minha inscrição?</h4>
+              <div id="answer3" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Depois de fazer sua inscrição, você receberá o acesso em seu e-mail em menos de 1 minuto após o pagamento. Se você não receber, verifique sua caixa de spam. Se ainda não estiver lá, basta entrar em contato com nossa equipe de suporte ao cliente! (você receberá nosso contato exclusivo para clientes assim que fizer a compra)</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;color: #fff;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(4)">Quanto tempo para ter resultados?</h4>
+              <div id="answer4" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Nossa estimativa de resultados é que em 30 dias aplicando o método você já veja os pimeiros resultados com o primeiro livro publicado. Porém temos casos incríveis de pessoas que conseguiram grandes resultados em menos de 10 dias, e pessoas que alcançaram isso em pouco mais de um mês. Tudo vai depender da sua dedicação em seguir o método corretamente.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;color: #fff;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(5)">Funciona para mim?</h4>
+              <div id="answer5" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Se você seguir o passo a passo e fizer o cronograma corretamente, pode ter certeza que você alcançará resultados incríveis e vai ver os primeiros resultados</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;color: #fff;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(6)">Quais as formas de pagamento?</h4>
+              <div id="answer6" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Pix ou cartão de crédito parcelado em até 6x.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>        
+
+            <script>
+              function toggleAnswer(questionNumber) {
+                var answer = document.getElementById('answer' + questionNumber);
+                answer.classList.toggle('show');
+              }
+            </script>
+        </div>     
+
+      </div>
+    </section>
+
+
+    <script>
+      document.getElementById('timer1').innerHTML =
+      09 + ":" + 00;
+      startTimer1();
+      
+      function startTimer1() {
+        var presentTime1 = document.getElementById('timer1').innerHTML;
+        var timeArray1 = presentTime1.split(/[:]+/);
+        var m = timeArray1[0];
+        var s = checkSecond1((timeArray1[1] - 1));
+        if(s==59){m=m-1}
+        //if(m<0){alert('timer completed')}
+        
+        document.getElementById('timer1').innerHTML =
+          m + ":" + s;
+        setTimeout(startTimer1, 1000);
+      }
+      
+      function checkSecond1(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+      }
+    </script>
+    <script>
+      document.getElementById('timer2').innerHTML =
+        09 + ":" + 00;
+      startTimer2();
+      
+      function startTimer2() {
+        var presentTime2 = document.getElementById('timer2').innerHTML;
+        var timeArray2 = presentTime2.split(/[:]+/);
+        var m = timeArray2[0];
+        var s = checkSecond2((timeArray2[1] - 1));
+        if(s==59){m=m-1}
+        //if(m<0){alert('timer completed')}
+        
+        document.getElementById('timer2').innerHTML =
+          m + ":" + s;
+        setTimeout(startTimer2, 1000);
+      }
+      
+      function checkSecond2(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+      }
+    </script>
+    <script>
+      document.getElementById('timer3').innerHTML =
+        09 + ":" + 00;
+      startTimer3();
+      
+      function startTimer3() {
+        var presentTime3 = document.getElementById('timer3').innerHTML;
+        var timeArray3 = presentTime3.split(/[:]+/);
+        var m = timeArray3[0];
+        var s = checkSecond3((timeArray3[1] - 1));
+        if(s==59){m=m-1}
+        //if(m<0){alert('timer completed')}
+        
+        document.getElementById('timer3').innerHTML =
+          m + ":" + s;
+        setTimeout(startTimer3, 1000);
+      }
+      
+      function checkSecond3(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+      }
+    </script>
+    <script>
+      var $doc = $('html, body');
+      $('.scrollSuave').click(function() {
+          $doc.animate({
+              scrollTop: $( $.attr(this, 'href') ).offset().top
+          }, 500);
+          return false;
+      });
+    </script>
+
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const prefixes = ["https://pay.kiwify.com.br/ToG0165"];
+
+                function getAllParams(url) {
+                    const urlObj = new URL(url);
+                    let paramString = "";
+
+                    // Iterando sobre todos os parâmetros da URL
+                    for (const [key, value] of urlObj.searchParams) {
+                        paramString += `${paramString ? '&' : ''}${key}=${value}`;
+                    }
+
+                    return paramString;
+                }
+
+                const links = document.querySelectorAll("a");
+
+                links.forEach(link => {
+                    const hasPrefix = prefixes.some(prefix => link.href.includes(prefix));
+                    if (hasPrefix) {
+                        const params = getAllParams(window.location.href);
+                        const separator = link.href.includes("?") ? "&" : "?";
+                        link.href += `${separator}${params}`;
+                    }
+                });
+            });
+        </script>
+  </body>
+</html>

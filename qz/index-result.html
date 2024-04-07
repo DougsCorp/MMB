@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<!-- META TAGS -->
+
+<meta charset="UTF-8">
+
+<meta property="og:type" content="website" />
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Machine Books</title>
+
+<!-- LINKS -->
+
+<link rel="stylesheet" href="scripts/styles.css">
+<link rel="shortcut icon" href="images/fav.html">
+
+<!-- STYLES -->
+
+<style>
+
+* {
+    color: #000;
+}
+body {
+    background: #fff;
+}
+.logo {
+    width: 250px;
+    margin: auto;
+}
+.progress {
+    background: #ff0026;
+}
+.bar {
+    background: #222222;
+}
+.option {
+    color: #000;
+    background: transparent;
+    border: solid 1px #ff0026;
+}
+.option:hover {
+    color: #DDDDDD;
+    background: #ff0026;
+    border: solid 1px #ff0026;
+}
+.loading {
+    background: #000000;
+}
+.loading-title, .loading-text {
+    color: #FFFFFF;
+}
+.loading-bar-progress {
+    background: #ff0026;
+    animation: loading-bar -2s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+}
+.loading-bar {
+    background: #222222;
+}
+.disclaimer, .disclaimer a, .disclaimer a:visited {
+    color: #777777;
+}
+@keyframes progress {
+    0%      {width: 85.714285714286%;}
+    100%    {width: 90.47619047619%;}
+}
+</style>
+
+
+</head> 
+<body>
+
+
+<style>
+.loading {
+    animation: loading 500ms ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+.report {
+    animation: appear 500ms ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+.report-score, .report-image, .report-metrics {
+    background: linear-gradient(to top right, #000, #5299e5);
+    /*border: solid 1px #000305;*/
+}
+.report-result {
+    color: #ffffff;
+    background: #187f00;
+    /*border: solid 1px #ff0026;*/
+}
+.metrics-col {
+    border-color: #000305;
+}
+.metrics-bar {
+    background: #111111;
+}
+.metrics-title, .score-title, .score-label {
+    color: #ffffff;
+}
+.bar1-progress {
+    background: linear-gradient(to top, #ff9900, #fff700);
+    animation: bar1 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+.bar2-progress {
+    background: linear-gradient(to top, #f2fd45, #5edb00);
+    animation: bar2 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+.bar3-progress {
+    background: linear-gradient(to top, #f2fd45, #5edb00);
+    animation: bar3 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+}
+.bar4-progress {
+    background: linear-gradient(to top, #ff9900, #fff700);
+    animation: bar4 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.6s;
+}
+.bar-label {
+    color: #000;
+    animation: appear 1s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+.notice {
+    background: linear-gradient(to top right, #fffeea, #fffeea);
+    border: solid 1px #194f75;
+    animation: appear 500ms ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.notice-title {
+    color: #000000;
+}
+.notice-text {
+    color: #000000;
+}
+.continue {
+    animation: appear 500ms ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    background: #2c7de6;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+    opacity: 0;
+}
+.continue:hover {
+    background: #01b000;
+    color: #FFFFFF;
+    border: solid 1px transparent;
+}
+@keyframes bar1 {
+    0%      {height: 0px;}
+    100%    {height: 54px;}
+}
+@keyframes bar2 {
+    0%      {height: 0px;}
+    100%    {height: 56px;}
+}
+@keyframes bar3 {
+    0%      {height: 0px;}
+    100%    {height: 50px;}
+}
+@keyframes bar4 {
+    0%      {height: 0px;}
+    100%    {height: 54px;}
+}
+</style>
+<body>
+
+<img style="width:250px" class="logo" src="images/logo-branco.png"/>
+
+<div class="loading">
+  <div class="content center">
+    <div class="loading-bar"><div class="loading-bar-progress"></div></div>
+    <span class="loading-title">Analisando...</span>
+    <span class="loading-text">Estamos analisando as suas<br />respostas e preparando<br />o seu relatório...</span>
+  </div>
+</div>
+
+<!-- CIRCLE -->
+
+<script src="ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="scripts/circle/dist/circle-progress.js"></script>
+
+<section style="padding-top: 19px;">
+  <div class="content center">
+    	<h1>Análise de perfil CONCLUÍDA!</h1>	
+        <span class="description">Você esta qualificado(a) para acessar o método Machine Books</span>	<div class="report">
+        <div class="report-row">
+            <div class="report-left">
+                <div class="report-score">
+                    <span class="score-title">SUA APTIDÃO ATUAL:</span>
+                    <div class="score-bar"><span class="score-label"></span></div>
+                </div>
+            </div>
+            <div class="report-right">
+                <div class="report-result">Resultado: APTO ✅</div>
+                <div class="report-image">
+                    <img src="images/result.png" />                                    
+                </div>
+            </div>
+        </div>
+        <div class="report-row">
+            <div class="report-metrics">
+                <div class="metrics-col">
+                    <div class="metrics-bar">
+                        <div class="bar1-progress"><span class="bar-label">84%</span></div>
+                    </div>
+                    <span class="metrics-title">MENTALIDADE</span>
+                    <span style="color:#fff" class="metrics-desc">Motivação para aplicar o método</span>
+                </div>
+                <div class="metrics-col">
+                    <div class="metrics-bar">
+                        <div class="bar2-progress"><span class="bar-label">86%</span></div>
+                    </div>
+                    <span class="metrics-title">PERFIL</span>
+                    <span style="color:#fff" class="metrics-desc">Compativel com os casos de sucesso.</span>
+                </div>
+
+                <div class="metrics-col" style="margin-right: 0;border: 0;padding: 0;">
+                    <div class="metrics-bar">
+                        <div class="bar4-progress"><span class="bar-label">84%</span></div>
+                    </div>
+                    <span class="metrics-title">RESULTADOS</span>
+                    <span style="color:#fff" class="metrics-desc">Possibilidade de atingir o resultado em até 30 dias</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="notice">
+            <span style="text-align:center;" class="notice-title"><img class="notice-icon" src="images/icons/check.webp" />Você está pronto(a) para acessar o método Machine Books.</span>
+            <span style="text-align:center;" class="notice-text">Parabéns através de suas resposta identificamos que o seu perfil está <b style="color:#000">81%</b> compativel com os nossos casos de sucesso. <b style="color:#000">Por isso, basta aplicar o Passo a Passo para ter resultados em poucos dias.</b></span>
+        </div>
+    </div>
+        <a class="continue" href="index-bonus1.html">Continuar</a>
+      </div>
+</section>
+
+<script>
+
+/* CIRCLE */
+
+setTimeout(()=>{
+    $('.score-bar').circleProgress({
+        value: 0.81,
+        lineCap: 'round',
+        size: 120,
+        thickness: 16,
+        animationStartValue: 0,
+        startAngle: 4.8,
+        emptyFill: "#111111",
+        animation: { duration: 3000, easing: "circleProgressEasing" },
+        fill: { gradient: ["#01bb00", "#f00"] }
+    }).on('circle-animation-progress', function(event, progress) {
+        $(this).find('.score-label').html('81%');
+    });
+}, 1000);
+
+</script>
+
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const prefixes = ["index-bonus1.html"];
+
+                function getAllParams(url) {
+                    const urlObj = new URL(url);
+                    let paramString = "";
+
+                    // Iterando sobre todos os parâmetros da URL
+                    for (const [key, value] of urlObj.searchParams) {
+                        paramString += `${paramString ? '&' : ''}${key}=${value}`;
+                    }
+
+                    return paramString;
+                }
+
+                const links = document.querySelectorAll("a");
+
+                links.forEach(link => {
+                    const hasPrefix = prefixes.some(prefix => link.href.includes(prefix));
+                    if (hasPrefix) {
+                        const params = getAllParams(window.location.href);
+                        const separator = link.href.includes("?") ? "&" : "?";
+                        link.href += `${separator}${params}`;
+                    }
+                });
+            });
+        </script>
+
+</body>
+</html>
